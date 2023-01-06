@@ -5,5 +5,5 @@ while read line; do
 
     status_code=$(curl -I $url | head -n 1 | cut -d' ' -f2)
 
-    echo "$url: $status_code" >> output.txt
+    echo "$url: $status_code" >> status.txt
 done < domains.txt
